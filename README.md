@@ -1,4 +1,4 @@
 # selenium
 Automating some tasks on eSchool website using using selenium 
-# by HAITHAM BADARIN
-+972569045182
+by HAITHAM BADARIN
+contact: badarin2050@gmail.com
