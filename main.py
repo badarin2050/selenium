@@ -10,13 +10,14 @@ for i in range(300):
     browser.switch_to_alert().accept()
 
 
-#Accept a student in grade 1 in archive
-for i in range(3):
-    browser.find_element_by_xpath('//*[@id="acdnmenu"]/ul/li[3]/div').click()
-    radio = browser.find_element_by_id('checkbox1')
-    radio.click()
-    dropdown =Select(browser.find_element_by_id('gradeToWaitingForAprove1'))
-    dropdown.select_by_visible_text('الأول أ / الأساسي')
-    browser.find_element_by_xpath('//*[@id="acceptt"]/table/tbody/tr[3]/td/div/div/div[2]').click()
+#Accept number of i of students in a grade 
+
+for i in range(1,10):
+    browser.find_element_by_id('checkbox'+str(i)).click()
+    dropdown = Select(browser.find_element_by_id('gradeToWaitingForAprove'+str(i)))
+    dropdown.select_by_visible_text('العاشر ا / الأساسي')
+browser.find_element_by_xpath('//*[@id="acceptt"]/table/tbody/tr[3]/td/div/div/div[2]').click()
+
+
 
 
